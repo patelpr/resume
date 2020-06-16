@@ -8,7 +8,6 @@
       <Education />
     </div>
     <div>
-      <Typewriter />
     </div>
   </div>
 </template>
@@ -38,19 +37,9 @@ body {
   position: absolute;
   height: 700px;
   width: 100%;
-  font-family: ubuntu;
+  font-family: Victor Mono,'Courier New', Courier, monospace;
 }
 
-#background {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url(https://cdnsite2.assist.ro/sites/all/themes/assist/img/backgrounds/testimonials_bg.png) repeat;
-  background-color: #095396;
-}
 
 
 </style>
