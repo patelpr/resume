@@ -1,5 +1,5 @@
 <template>
-  <div class="pro-panel grid-item" style="margin: 0px; padding: 0px; width: 100%">
+  <div class="pro-panel" style="margin: 0px; padding: 0px; width: 100%">
     <h1>Devjutzu</h1>
      <Typewriter />
     <p class="sums" v-for="(sum,index) in about.summary" :key="index">{{sum}}</p>
@@ -28,7 +28,6 @@ export default {
 <style scoped>
 .pro-panel {
   font-family: "Victor Mono", "Courier New", Courier, monospace;
-  background-color: #1f2541;
   color: white;
   width: 100%;
   height: 400px;

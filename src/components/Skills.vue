@@ -1,22 +1,25 @@
+
 <template>
   <div class="skills-panel">
-    <div>
-
-		<img v-for="(svg,index) in about.slugs.stacks" :key="index" :src="'./../assets/svg-icons/stack/' + svg + '.svg'" />
+    <h2>Skills</h2>
+    <div v-for="(svg,index) in about.slugs.stacks" :key="index" class="svg-holder">
+		  <img v-bind="'./../assets/svg-icons/' + svg + '.svg'" />
     </div>
   </div>
 </template>
 
-<script>
 
+<script>
+import {mapState} from 'vuex'
 export default {
   name: "Skills",
-  data(){
+  computed:{
+    ...mapState(['about'])
   }
 };
 </script>
 <style scoped>
-img{
-	fill:000;
+.svg-holder{
+  display: inline-block;
 }
 </style>

@@ -1,6 +1,13 @@
 <template>
   <div class="edu-panel">
-    <h3>{{about.education.name}}</h3>
+    <h2>Education</h2>
+    <div v-for="(edu,i) in about.education" :key='edu + i' class="edu-card">
+      <h3>{{edu.name}}</h3>
+      <h4>{{edu.program}}</h4>
+      <ul>
+        <li v-for="(desc,i) in edu.description" :key='i + edu + i' class='edu-desc'> {{desc}} </li>
+      </ul>
+    </div>
   </div>
 </template>
 

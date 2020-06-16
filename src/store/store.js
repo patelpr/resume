@@ -69,13 +69,13 @@ export const store = new Vuex.Store({
 			],
 			project: [
 				{
-					name: "VAYCAY",
+					name: "Vaycay",
 					desc: "Created a Node app inspired by my love for travel",
 					url: "http://fathomless-beach-31066.herokuapp.com/",
 					stack: ["heroku", "javascript", "node", "html"],
 				},
 				{
-					name: "WAHFOODINA",
+					name: "Wahfoodina",
 					desc: "App using recipe API",
 					url: "http://wahfoodina.firebaseapp.com",
 					stack: ["html", "css", "javascript"],
