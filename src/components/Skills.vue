@@ -1,10 +1,12 @@
 
 <template>
-  <div class="skills-panel">
+  <div class="panel">
     <fieldset>
       <legend>Skills</legend>
       <div v-for="(svg) in about.slugs.stacks" :key="svg" class="svg-holder">
-        <!-- <img v-bind:src="'../assets/svg-icons/' + svg + '.svg'" /> -->
+        <p>{{svg.charAt(0).toUpperCase() + svg.slice(1)}} /> </p>
+        
+        <!-- <img v-bind:src="'../assets/svg-icons/' + svg + '.svg'" :key="svg+','+ svg" /> -->
       </div>
     </fieldset>
   </div>

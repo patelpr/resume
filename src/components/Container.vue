@@ -38,6 +38,7 @@ export default {
 <style>
 html{
   width: 100%;
+  height: 100%;
 }
  body {
   margin: 0;
@@ -53,17 +54,19 @@ html{
 #container h1 {
   text-align: center;
   color: whitesmoke;
-}
-
-.pro-elements,
-.res-elements {
-  margin: 0px;
+  margin:0;
   padding: 15px;
 }
-.pro-elements {
-  top: 0;
-  height: auto;
+.pro-elements{
   background-color: #1f2541;
+
+}
+.pro-elements > fieldset {
+  display: inline-block;
+  width: calc(100% / 4);
+  display: inline-block;
+  margin: calc(((100% / 4)/ 3)/3);
+  min-width: 300px;
 }
 
 
@@ -86,8 +89,53 @@ html{
   text-align: center;
   font-style: italic;
 }
-/* Use a media query to add a breakpoint at 800px: */
-@media (max-width: 400px) {
 
+.card{
+  background-color: #eee;
+  color: #1f2541;
+  padding:10px;
+  margin:20px;
+}
+.card > h3,.card> h4{
+  line-height: 5px;
+
+}
+a{
+  text-decoration: none;
+}
+.card:hover{
+  background-color: #1f2541;
+  color:whitesmoke;
+}
+.dropnotes{
+  display: none;
+  height: 0px;
+  
+  background-color: whitesmoke;
+  border: .5px solid #1f2541;
+  color: #1f2541;
+  font-size: .7vw;
+  text-align: left;
+  padding: 15px;
+}
+.card:hover > .dropnotes {
+  display: block;
+  height: auto;
+
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+
+@media (max-width: 1400px) {
+body > div{
+  display: block;
+  font-size: 1.2vw;
+}
+}
+@media (max-width: 800px) {
+body > div{
+  display: block;
+  font-size: 3vw;
+}
 }
 </style>

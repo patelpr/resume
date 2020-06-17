@@ -5,7 +5,7 @@
         class="txt-rotate"
         data-period="2000"
         data-rotate='["Devjutzu"]'
-      ></span>/&#62;
+      ></span> /&#62;
     </h1>
   </div>
 </template>

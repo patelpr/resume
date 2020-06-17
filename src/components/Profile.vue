@@ -1,9 +1,8 @@
 <template>
   <div class="pro-panel">
-<Contact />
-<Summary/>
-<Skills />
-	
+    <Contact />
+    <Summary />
+    <Skills />
   </div>
 </template>
 
@@ -14,16 +13,13 @@ import Skills from "./Skills";
 import Summary from "./Summary";
 import Contact from "./Contact";
 
-
-
-
 export default {
   name: "Profile",
   components: {
-	Typewriter,
-  Skills,
-  Summary,
-  Contact,
+    Typewriter,
+    Skills,
+    Summary,
+    Contact
   },
   computed: {
     ...mapState(["about"])
@@ -38,21 +34,21 @@ export default {
   padding: 15px;
   width: 100%;
   text-align: center;
-
 }
-.pro-panel>div{
+.pro-panel > div {
   margin: 0;
   display: inline-block;
   padding: 10px;
-  width:calc(100% / 4);
+  width: calc(100% / 4);
   min-width: 300px;
-  margin: calc(((25% / 3)/3)/3);
+  margin: calc(((25% / 3) / 3) / 3);
 }
-fieldset{
-  font-size: .7em;
-
-
+fieldset {
+  font-size: 0.6vw;
 }
-
+fieldset:hover {
+  background-color: whitesmoke;
+  color: #1f2541;
+}
 
 </style>

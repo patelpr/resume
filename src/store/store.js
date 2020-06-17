@@ -82,19 +82,21 @@ export const store = new Vuex.Store({
 							stack: ["html", "css", "javascript"],
 						},
 					],
-					edu: {
+					education: [{
 						name: "Thinkful",
 						program: "Full Stack Program",
+						url:'http://www.thinkful.com',
 						description: [
 							"Intensive course in full stack JavaScript development",
 							"Learned industry best practices and practical software development standards by collaborating several hours a week with a senior web developer.",
-						],
+						]},{
 						name: "freeCodeCamp",
 						program: "Online Self Code Course",
+						url:'http://www.freecodecamp.com',
 						description: [
 							"Learn to code by completing coding challenges and building projects. ",
 						],
-					},
+					}],
 					experience: [
 						{
 							company: "Master Graphic Services",
@@ -125,7 +127,7 @@ export const store = new Vuex.Store({
 								end: "2014",
 							},
 							desc: [
-								"Built personal and business websites and sold monthly packages to businesses (example: http://www.questtravelgroup.com)",
+								"Built personal and business websites and sold monthly packages to businesses (e.g.: www.questtravelgroup.com)",
 								"Used sales techniques to meet customers’ needs and company goals.",
 								"Trained and coached new team members.",
 							],

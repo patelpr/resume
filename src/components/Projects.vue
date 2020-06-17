@@ -1,13 +1,21 @@
 <template>
-  <div class="projects-panel">
+  <div class="res-panel">
     <h2>Projects</h2>
-    <div v-for="(proj,i) in about.project" :key='proj + i' class="proj-card">
-      <a v-bind:href="proj.url"> 
-      <h3>{{proj.name}}</h3>
-      <div class="proj-stack"></div>
-      <p>{{proj.desc}}</p>
+    <div v-for="(proj,i) in about.project" :key="proj + i">
+      <a v-bind:href="proj.url">
+        <div class="card">
+          <h3>{{proj.name}}</h3>
+          <p
+            class="stack"
+            v-for="svg in proj.stack"
+            :key="svg"
+          >{{svg.charAt(0).toUpperCase()+ svg.slice(1)}},</p>
+          <div class="dropnotes">
+            <p>{{proj.desc}}</p>
+          </div>
+        </div>
       </a>
-      </div>
+    </div>
   </div>
 </template>
 
@@ -23,19 +31,8 @@ export default {
 </script>
 
 <style scoped>
-
-.proj-card{
-  background-color: #eee;
-  color: #1f2541;
-  padding:15px;
-  margin:10px;
+.stack {
+  font-size: 1vw;
+  display: inline-block;
 }
-.proj-card a>*{
-  text-decoration: none;
-}
-.proj-card:hover{
-  background-color: #1f2541;
-  color:whitesmoke;
-}
-
 </style>

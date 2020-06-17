@@ -1,12 +1,17 @@
 <template>
-  <div class="exp-panel">
+  <div class="res-panel">
     <h2>Experience</h2>
-    <div v-for="(exp,i) in about.experience" :key="exp.company + i" class="exp-card">
+    <div v-for="(exp) in about.experience" :key="exp.company" class="card">
       <h3>{{exp.company }}</h3>
+      <h4>{{exp.position}}</h4>
       <p>{{exp.location.city}}, {{exp.location.state}}</p>
-      <div v-for="(desc,i) in exp.description" :key="exp + i" class="edu-desc">
+      <div class="dropnotes">
+        <p>{{exp.years.start}} - {{exp.years.end}}</p>
+      <div v-for="(desc) in exp.desc" :key="desc" class="edu-desc">
         <p>{{desc}}</p>
       </div>
+      </div>
+
     </div>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-      <div class="con-panel">
+      <div class="panel">
       <fieldset>
       <legend>About</legend>
 	  <p>My name is {{about.name}}, I am a {{about.profession}}.</p>
