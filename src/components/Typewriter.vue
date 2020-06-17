@@ -1,12 +1,11 @@
 <template>
   <div id="typewriter">
-    <h1>
-     // I am 
-      <span
+    
+      <h1>&#60; <span
         class="txt-rotate"
         data-period="2000"
-        data-rotate='["a developer.", "in love with Neha", "an engineer.", "a problem-solver.", "creative.", "loads of fun!"]'
-      ></span>
+        data-rotate='["Devjutzu"]'
+      ></span>/&#62;
     </h1>
   </div>
 </template>
@@ -69,17 +68,15 @@ window.onload = function() {
   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
   document.body.appendChild(css);
 };
-export default {};
+import {mapState} from 'vuex'
+export default {
+  name:"Typewriter",
+  computed:{
+    ...mapState(['about'])
+  }
+};
 </script>
 
 <style scoped>
-#typewriter{
-  opacity: 60%;
-  display: inline-block;
-}
 
-.txt-rotate{
-	font-style: italic;
-	font-weight: 200;
-}
 </style>

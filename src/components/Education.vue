@@ -1,14 +1,10 @@
 <template>
   <div class="edu-panel">
     <h2>Education</h2>
-    <div v-for="(edu,i) in about.education" :key='edu + i' class="edu-card">
-      <h3>{{edu.name}}</h3>
-      <h4>{{edu.program}}</h4>
-      <ul>
-        <li v-for="(desc,i) in edu.description" :key='i + edu + i' class='edu-desc'> {{desc}} </li>
-      </ul>
+    <div v-for="edu in about.education" :key="edu.name"><h1>{{edu.name}}</h1>
     </div>
-  </div>
+
+    </div>
 </template>
 
 <script>
@@ -17,7 +13,7 @@ import { mapState } from "vuex";
 export default {
   name: "Education",
   computed: {
-    ...mapState(["about"])
+    ...mapState(['about']),
   }
 };
 </script>

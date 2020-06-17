@@ -23,16 +23,19 @@ export default {
 </script>
 
 <style scoped>
+
 .proj-card{
-  height:100%;
+  background-color: #eee;
+  color: #1f2541;
+  padding:15px;
+  margin:10px;
 }
-.proj-card>*{
+.proj-card a>*{
   text-decoration: none;
-  color: #1f2541
 }
 .proj-card:hover{
   background-color: #1f2541;
-  color:white;
+  color:whitesmoke;
 }
 
 </style>

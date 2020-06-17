@@ -1,25 +1,27 @@
 
 <template>
   <div class="skills-panel">
-    <h2>Skills</h2>
-    <div v-for="(svg,index) in about.slugs.stacks" :key="index" class="svg-holder">
-		  <img v-bind="'./../assets/svg-icons/' + svg + '.svg'" />
-    </div>
+    <fieldset>
+      <legend>Skills</legend>
+      <div v-for="(svg) in about.slugs.stacks" :key="svg" class="svg-holder">
+        <!-- <img v-bind:src="'../assets/svg-icons/' + svg + '.svg'" /> -->
+      </div>
+    </fieldset>
   </div>
 </template>
 
 
 <script>
-import {mapState} from 'vuex'
+import { mapState } from "vuex";
 export default {
   name: "Skills",
-  computed:{
-    ...mapState(['about'])
+  computed: {
+    ...mapState(["about"])
   }
 };
 </script>
 <style scoped>
-.svg-holder{
+.svg-holder {
   display: inline-block;
 }
 </style>

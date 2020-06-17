@@ -1,15 +1,15 @@
 <template>
   <div id="container">
-    <div class="pro-elements" >
+    <div class="pro-elements">
+		<Typewriter />
       <Profile />
     </div>
-      <div class="res-elements">
-        <Projects />
-        <Experience />
-        <Education />
-        <Skills />
-      </div>
+    <div class="res-elements">
+      <Projects />
+      <Experience />
+      <Education />
     </div>
+  </div>
 </template>
 
 <script>
@@ -17,9 +17,9 @@ import Profile from "./Profile";
 import Projects from "./Projects";
 import Experience from "./Experience";
 import Education from "./Education";
-import Skills from "./Skills";
+import Typewriter from "./Typewriter";
 
-
+import { mapState } from "vuex";
 export default {
   name: "Container",
   components: {
@@ -27,47 +27,67 @@ export default {
     Projects,
     Experience,
     Education,
-    Skills,
+	Typewriter,
+  },
+  computed: {
+    ...mapState(["about"])
   }
 };
 </script>
 
 <style>
-body {
-  margin: 0;
-  position: absolute;
-  height: 300px;
+html{
   width: 100%;
-  font-family: Victor Mono,'Courier New', Courier, monospace;
-  background-color: #1f2541;
-
 }
-.pro-elements, .res-elements{
+ body {
+  margin: 0;
+  width: 100%;
+  font-family: Victor Mono, "Courier New", Courier, monospace;
+  background-color: whitesmoke;
+  font-size: 1vw;
+}
+#container {
+  width: 100%;
+  text: center;
+}
+#container h1 {
+  text-align: center;
+  color: whitesmoke;
+}
+
+.pro-elements,
+.res-elements {
   margin: 0px;
   padding: 15px;
-  left:0;
-  right: 0;
-  height: 50%;
-  position: fixed;
-  }
-  .pro-elements{
-    top:0;
-  }
-  .res-elements{
+}
+.pro-elements {
+  top: 0;
+  height: auto;
+  background-color: #1f2541;
+}
 
-    background-color: whitesmoke;
-    bottom:0;
-  
-  }
-  .res-elements>*{
-    display: inline-block;
-    margin:10px;
-    border: 2px dashed olive ;
-    padding: 15px;
-    min-width: 400px;
-    top:0;
-  }
-  .res-elements h2{
-    text-align: center;
-  }
+
+.res-elements {
+  background-color: whitesmoke;
+  text-align: center;
+}
+.res-elements > div {
+  display: inline-block;
+  border: 2px solid olive;
+  padding: 15px;
+  width: calc(100% / 4);
+  display: inline-block;
+  vertical-align: top;
+  margin: calc(((100% / 4)/ 3)/3);
+  min-width: 300px;
+}
+
+.res-elements h2,legend {
+  text-align: center;
+  font-style: italic;
+}
+/* Use a media query to add a breakpoint at 800px: */
+@media (max-width: 400px) {
+
+}
 </style>
