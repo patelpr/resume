@@ -42,18 +42,18 @@ body>*{
 @media (max-width: 400px) {
 body{
   font-size: 5vw;
+
 }
 
-html{
+html,body{
   width: 100%;
-  font-size: calc(1em + 1vw)
-}
- body {
+  font-size: calc(1em + 1vw);
+  overflow-x: hidden;
+  max-width: 100%;
   margin: 0;
   width: 100%;
   font-family: Victor Mono, "Courier New", Courier, monospace;
   background-color: whitesmoke;
-  font-size: 1vw;
   transition-property: display;
   transition-duration: 2s;
   transition-delay: .5s;
