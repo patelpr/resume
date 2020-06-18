@@ -9,10 +9,8 @@
             class="stack"
             v-for="svg in proj.stack"
             :key="svg"
-          >{{svg.charAt(0).toUpperCase()+ svg.slice(1)}},</p>
-          <div class="dropnotes">
+          >{{svg.charAt(0).toUpperCase()+ svg.slice(1)}},&#160;</p>
             <p>{{proj.desc}}</p>
-          </div>
         </div>
       </a>
     </div>
@@ -32,7 +30,6 @@ export default {
 
 <style scoped>
 .stack {
-  font-size: 1vw;
   display: inline-block;
 }
 </style>

@@ -36,9 +36,11 @@ export default {
 </script>
 
 <style>
+
+
 html{
   width: 100%;
-  height: 100%;
+  font-size: calc(1em + 1vw)
 }
  body {
   margin: 0;
@@ -109,8 +111,6 @@ a{
 }
 .dropnotes{
   display: none;
-  height: 0px;
-  
   background-color: whitesmoke;
   border: .5px solid #1f2541;
   color: #1f2541;
@@ -120,21 +120,9 @@ a{
 }
 .card:hover > .dropnotes {
   display: block;
-  height: auto;
-
-}
-
-/* Use a media query to add a breakpoint at 800px: */
-
-@media (max-width: 1400px) {
-body > div{
-  display: block;
-  font-size: 1.2vw;
-}
 }
 @media (max-width: 800px) {
-body > div{
-  display: block;
+body>*{
   font-size: 3vw;
 }
 }
