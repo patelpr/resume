@@ -16,7 +16,6 @@ export default {
 	computed:{
 		...mapState(['about'])
 	}
-
 }
 </script>
 

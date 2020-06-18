@@ -2,7 +2,7 @@
   <div class="res-panel">
     <h2>Projects</h2>
     <div v-for="(proj,i) in about.project" :key="proj + i">
-      <a v-bind:href="proj.url">
+      <a v-bind:href="proj.url" target="_blank" >
         <div class="card">
           <h3>{{proj.name}}</h3>
           <p

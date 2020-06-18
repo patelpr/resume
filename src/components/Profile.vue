@@ -39,9 +39,9 @@ export default {
   margin: 0;
   display: inline-block;
   padding: 10px;
-  width: calc(100% / 4);
+  width: calc((100% / 3)/3);
   min-width: 300px;
-  margin: calc(((25% / 3) / 3) / 3);
+  margin: calc(((25% / 3) / 3) );
 }
 fieldset {
   font-size: 0.6vw;
