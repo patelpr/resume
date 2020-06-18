@@ -90,4 +90,8 @@ body>*{
 }
 
 }
+@media (max-width: 400px) {
+body{
+  font-size: 5vw;
+}
 </style>
