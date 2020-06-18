@@ -8,7 +8,6 @@
 
 <script>
 import { mapState } from "vuex";
-import Typewriter from "./Typewriter";
 import Skills from "./Skills";
 import Summary from "./Summary";
 import Contact from "./Contact";
@@ -16,7 +15,6 @@ import Contact from "./Contact";
 export default {
   name: "Profile",
   components: {
-    Typewriter,
     Skills,
     Summary,
     Contact
@@ -28,29 +26,24 @@ export default {
 </script>
 
 <style >
-.pro-panel {
-  font-family: "Victor Mono", "Courier New", Courier, monospace;
+.pro-elements{
+  background-color: #1f2541;
   color: whitesmoke;
-  padding: 15px;
-  width:auto;
   text-align: center;
 }
 .pro-panel > div {
-  margin: 0;
   display: inline-block;
-  padding: 10px;
-  width: calc(((100% / 3)/3)/3);
+  border: 2px solid whitesmoke;
+  padding: 15px;
+  width: calc(100% / 4);
+  vertical-align: bottom;
+  margin: calc(((100% / 4)/ 3)/3);
   min-width: 300px;
-  margin: calc(((25% / 3) / 3) /3);
+}
+.panel > h2{
+  position: relative;
+  top:-50px
 }
 
-fieldset:hover {
-  background-color: whitesmoke;
-  color: #1f2541;
-}
-fieldset:hover>legend{
-  position:relative;
-  top:10px;
-}
 
 </style>

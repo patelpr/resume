@@ -1,9 +1,10 @@
 <template>
       <div class="panel">
-      <fieldset>
-      <legend>Summary</legend>
+      <h2 class="blue">Summary</h2>
+
+      <div>
     <p class="sums" v-for="(sum,index) in about.summary" :key="index">{{sum}}</p>
-    </fieldset>
+    </div>
     </div>
 </template>
 

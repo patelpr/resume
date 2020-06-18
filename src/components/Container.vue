@@ -1,22 +1,18 @@
 <template>
   <div id="container">
     <div class="pro-elements">
-		<Typewriter />
+		<div id="logo"><Typewriter /></div>
       <Profile />
     </div>
-    <div class="res-elements">
-      <Projects />
-      <Experience />
-      <Education />
+    <div class="res">
+      <Resume />
     </div>
   </div>
 </template>
 
 <script>
 import Profile from "./Profile";
-import Projects from "./Projects";
-import Experience from "./Experience";
-import Education from "./Education";
+import Resume from "./Resume";
 import Typewriter from "./Typewriter";
 
 import { mapState } from "vuex";
@@ -24,9 +20,7 @@ export default {
   name: "Container",
   components: {
     Profile,
-    Projects,
-    Experience,
-    Education,
+    Resume,
 	Typewriter,
   },
   computed: {
@@ -48,82 +42,52 @@ html{
   font-family: Victor Mono, "Courier New", Courier, monospace;
   background-color: whitesmoke;
   font-size: 1vw;
+  transition-property: display;
+  transition-duration: 2s;
+  transition-delay: .5s;
 }
 #container {
   width: 100%;
-  text: center;
-}
-#container h1 {
   text-align: center;
-  color: whitesmoke;
+}
+#logo {
+  text-align: center;
   margin:0;
-  padding: 15px;
-}
-.pro-elements{
-  background-color: #1f2541;
-
-}
-.pro-elements > fieldset {
-  display: inline-block;
-  width: calc(100% / 4);
-  display: inline-block;
-  margin: calc(((100% / 4)/ 3)/3);
-  min-width: 300px;
+  padding: 5px;
+  width: 100%;
 }
 
-
-.res-elements {
-  background-color: whitesmoke;
-  text-align: center;
-}
-.res-elements > div {
-  display: inline-block;
-  border: 2px solid olive;
-  padding: 15px;
-  width: calc(100% / 4);
-  display: inline-block;
-  vertical-align: top;
-  margin: calc(((100% / 4)/ 3)/3);
-  min-width: 300px;
-}
-
-.res-elements h2,legend {
+h2{
   text-align: center;
   font-style: italic;
 }
-
-.card{
-  background-color: #eee;
-  color: #1f2541;
-  padding:10px;
-  margin:20px;
-}
-.card > h3,.card> h4{
-  line-height: 5px;
-
-}
-a{
-  text-decoration: none;
-}
-.card:hover{
+.blue{
   background-color: #1f2541;
-  color:whitesmoke;
+  color:  whitesmoke;
 }
-.dropnotes{
-  display: none;
+.white{
   background-color: whitesmoke;
-  border: .5px solid #1f2541;
-  color: #1f2541;
-  font-size: .7vw;
-  text-align: left;
-  padding: 15px;
+  color:  #1f2541;
 }
-.card:hover > .dropnotes {
-  display: block;
+.stack {
+  display: inline-block;
+  padding:0px 7px 0px 7px;
+  margin:3px;
+  color: white;
+}
+.stack:hover{
+  background-color: whitesmoke;
+  color: #1f2541;
+  font-weight: 500;
+  font-style: italic;
 }
 @media (max-width: 800px) {
 body>*{
   font-size: 3vw;
 }
+.card > h3,.card> h4{
+  line-height:1em;
+}
+
 }
 </style>
