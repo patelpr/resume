@@ -30,7 +30,19 @@ export default {
 </script>
 
 <style>
+@media (max-width: 800px) {
+body>*{
+  font-size: 3vw;
+}
+.card > h3,.card> h4{
+  line-height:1em;
+}
 
+}
+@media (max-width: 400px) {
+body{
+  font-size: 5vw;
+}
 
 html{
   width: 100%;
@@ -81,17 +93,5 @@ h2{
   font-weight: 500;
   font-style: italic;
 }
-@media (max-width: 800px) {
-body>*{
-  font-size: 3vw;
-}
-.card > h3,.card> h4{
-  line-height:1em;
-}
 
-}
-@media (max-width: 400px) {
-body{
-  font-size: 5vw;
-}
 </style>
