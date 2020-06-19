@@ -1,7 +1,9 @@
 <template>
   <div id="container">
-    <div class="pro-elements">
+
+    <div class="pro">
 		<div id="logo"><Typewriter /></div>
+
       <Profile />
     </div>
     <div class="res">
@@ -30,47 +32,61 @@ export default {
 </script>
 
 <style>
-@media (max-width: 800px) {
-body>*{
+@media (max-width: 1000px) {
+*{
   font-size: 3vw;
+  
 }
-.card > h3,.card> h4{
+.pro-panel,.res-panel{
+  display: flex;
+  flex-direction: column;
+
+}
+.pro-panel>div,.res-panel>div{
+  width: auto;
+}
+
   line-height:1em;
 }
-
-}
-@media (max-width: 400px) {
-body{
-  font-size: 5vw;
-
+.panel h2{
+  position: static;
 }
 
+
+.pro{
+  background-color: #1f2541;
+  color: whitesmoke;
+  text-align: center;
+}
 html,body{
   width: 100%;
-  font-size: calc(1em + 1vw);
-  overflow-x: hidden;
-  max-width: 100%;
   margin: 0;
-  width: 100%;
   font-family: Victor Mono, "Courier New", Courier, monospace;
   background-color: whitesmoke;
-  transition-property: display;
-  transition-duration: 2s;
-  transition-delay: .5s;
+  overflow-x: hidden;
+
+}
+body{
+  font-size: 1vw;
 }
 #container {
   width: 100%;
   text-align: center;
 }
+.pro-panel,.res-panel{
+  display: flex;
+}
+#container>div{
+flex-wrap: nowrap;
+justify-content:space-evenly;  
+}
 #logo {
   text-align: center;
   margin:0;
   padding: 5px;
-  width: 100%;
 }
 
 h2{
-  text-align: center;
   font-style: italic;
 }
 .blue{
@@ -84,14 +100,16 @@ h2{
 .stack {
   display: inline-block;
   padding:0px 7px 0px 7px;
-  margin:3px;
+  margin:5px;
   color: white;
+  transition: background-color 1.7s;
 }
 .stack:hover{
   background-color: whitesmoke;
   color: #1f2541;
   font-weight: 500;
   font-style: italic;
+  
 }
 
 </style>
