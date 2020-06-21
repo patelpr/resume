@@ -1,10 +1,10 @@
 
 <template>
 
-    <div class="res-elements">
-      <Projects />
-      <Experience />
-      <Education />
+    <div class="res">
+      <Projects class="item"/>
+      <Experience class="item"/>
+      <Education class="item"/>
     </div>
 
 </template>
@@ -33,16 +33,11 @@ export default {
 .card{
   background-color: #eee;
   color: #1f2541;
-  padding:10px;
-  margin:20px;
-}
-.card > h3,.card> h4{
-  line-height: 5px;
+  border: 3px solid #1f2541;
+  margin:15px;
+
 }
 
-a{
-  text-decoration: none;
-}
 .card:hover{
   background-color: #1f2541;
   color:whitesmoke;
@@ -50,32 +45,21 @@ a{
 .dropnotes{
   display: none;
   background-color: whitesmoke;
-  border: 1px solid #1f2541;
+  border: 10px solid #1f2541;
   color: #1f2541;
-  text-align: left;
-  padding: 15px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  
 }
 .card:hover > .dropnotes {
   display: block;
 }
 
-.res-elements {
-  background-color: whitesmoke;
-  text-align: center;
-}
-.res-elements > div {
-  display: inline-block;
+
+.res > .panel {
   border: 2px solid olive;
-  padding: 15px;
-  width: calc(100% / 4);
-  vertical-align: top;
-  margin: calc(((100% / 4)/ 3)/3);
-  min-width: 300px;
 }
 
-a > div{
-	border-left: 5px solid #1f2541;
-	border-right: 5px solid #1f2541;
-}
 
 </style>

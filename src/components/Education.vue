@@ -1,5 +1,5 @@
 <template>
-  <div class="res-panel">
+  <div class="panel">
     <h2>Education</h2>
     <div v-for="edu in about.education" :key="edu.name">
       <a :href="edu.url">

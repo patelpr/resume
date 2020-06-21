@@ -3,6 +3,7 @@
       <h2 class="blue">Summary</h2>
 
       <div>
+        
     <p class="sums" v-for="(sum,index) in about.summary" :key="index">{{sum}}</p>
     </div>
     </div>

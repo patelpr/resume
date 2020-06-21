@@ -1,5 +1,5 @@
 <template>
-  <div class="res-panel">
+  <div class="panel">
     <h2>Experience</h2>
     <div v-for="(exp) in about.experience" :key="exp.company" class="card">
       <h3>{{exp.company }}</h3>

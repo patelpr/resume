@@ -1,6 +1,5 @@
 <template>
-  <div id="typewriter">
-    
+  <div>
       <h1>&#60; <span
         class="txt-rotate"
         data-period="2000"
